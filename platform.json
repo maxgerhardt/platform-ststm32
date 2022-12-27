@@ -204,7 +204,7 @@
       "type": "framework",
       "optional": true,
       "owner": "platformio",
-      "version": "symlink://C:\\Users\\Max\\Desktop\\stm32_dev\\ArduinoCore-stm32wb"
+      "version": "https://github.com/maxgerhardt/ArduinoCore-stm32wb.git"
     },
     "framework-arduinostm32mxchip": {
       "type": "framework",
