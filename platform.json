@@ -200,6 +200,12 @@
       "owner": "platformio",
       "version": "~3.10000.0"
     },
+    "framework-arduinoststm32wb": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "symlink://C:\\Users\\Max\\Desktop\\stm32_dev\\ArduinoCore-stm32wb"
+    },
     "framework-arduinostm32mxchip": {
       "type": "framework",
       "optional": true,
