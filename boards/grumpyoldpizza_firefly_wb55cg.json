@@ -1,0 +1,48 @@
+{
+  "build": {
+    "core": "stm32wb",
+    "cpu": "cortex-m4",
+    "extra_flags": "-DSTM32WB55xx -DARDUINO_STM32WB_FIREFLY",
+    "f_cpu": "64000000L",
+    "mcu": "stm32wb55cg",
+    "product_line": "STM32WB55xx",
+    "variant": "Firefly-WB55CG",
+    "hwids": [
+      [
+        "0x1209", 
+        "0x6671"
+      ]
+    ],
+    "usb_product": "Firefly"
+  },
+  "connectivity": [
+    "bluetooth"
+  ],
+  "debug": {
+    "default_tools": [
+      "stlink"
+    ],
+    "openocd_board": "st_nucleo_wb55",
+    "jlink_device": "STM32WB55xx",
+    "onboard_tools": [
+      "stlink"
+    ]
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "Firefly-WB55CG",
+  "upload": {
+    "maximum_ram_size": 196608,
+    "maximum_size": 524288,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic"
+    ]
+  },
+  "url": "https://github.com/kriswiner/Firefly",
+  "vendor": "Tlera Corporation"
+}

@@ -1,0 +1,48 @@
+{
+  "build": {
+    "core": "stm32wb",
+    "cpu": "cortex-m4",
+    "extra_flags": "-DSTM32WB55xx -DARDUINO_STM32WB_KATYDID",
+    "f_cpu": "64000000L",
+    "mcu": "stm32wb55cg",
+    "product_line": "STM32WB55xx",
+    "variant": "Katydid-WB55CG",
+    "hwids": [
+      [
+        "0x1209", 
+        "0x6672"
+      ]
+    ],
+    "usb_product": "Katydid"
+  },
+  "connectivity": [
+    "bluetooth"
+  ],
+  "debug": {
+    "default_tools": [
+      "stlink"
+    ],
+    "openocd_board": "st_nucleo_wb55",
+    "jlink_device": "STM32WB55xx",
+    "onboard_tools": [
+      "stlink"
+    ]
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "Katydid-WB55CG",
+  "upload": {
+    "maximum_ram_size": 196608,
+    "maximum_size": 524288,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "cmsis-dap",
+      "stlink",
+      "blackmagic"
+    ]
+  },
+  "url": "https://www.tindie.com/products/tleracorp/katydid-wearable-ble-sensor-board/",
+  "vendor": "Tlera Corporation"
+}

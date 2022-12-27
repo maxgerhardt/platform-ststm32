@@ -24,7 +24,7 @@
   "frameworks": [
     "arduino"
   ],
-  "name": "P-Nucleo WB55RG",
+  "name": "NUCLEO-WB55RG",
   "upload": {
     "maximum_ram_size": 196608,
     "maximum_size": 524288,
