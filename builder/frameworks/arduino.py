@@ -39,6 +39,10 @@ elif core == "stm32l0":
     build_script = join(
         env.PioPlatform().get_package_dir("framework-arduinoststm32l0"),
         "tools", "platformio-build.py")
+elif core == "STM32WLE":
+    build_script = join(
+        env.PioPlatform().get_package_dir("framework-arduinoststm32-rui3"),
+        "tools", "platformio-build.py")
 else:
     build_script = join(env.PioPlatform().get_package_dir(
         "framework-arduinoststm32"), "tools", "platformio", "platformio-build.py")

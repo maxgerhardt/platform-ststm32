@@ -1,0 +1,50 @@
+{
+    "build": {
+      "cpu": "cortex-m4",
+      "core": "STM32WLE",
+      "extra_flags": "-DSTM32WLE5xx -DSTM32WLE5xx -DCORE_CM4 -DUSE_HAL_DRIVER -DRAK3372+RAK5005-O_V1.0 -Drak3172 -DWISBLOCK_BASE_5005_O",
+      "f_cpu": "64000000L",
+      "framework_extra_flags": {
+        "arduino": "-DARDUINO_WisDuo_RAK3172_Evaluation_Board -DLORA_STACK_104 -DLORA_IO_SPI_PORT=2 -DSYS_RTC_COUNTER_PORT=2 -DATCMD_CUST_TABLE_SIZE=64 -DWAN_TYPE=0 -DLORA_STACK_VER=0x040700 -DSOFT_SE -DSECURE_ELEMENT_PRE_PROVISIONED -DLORAMAC_CLASSB_ENABLED -DSUPPORT_SPI -DSUPPORT_AT -DRUI_SDK"
+      },
+      "hwids": [
+        [
+          "0x1A86",
+          "0x7523"
+        ]
+      ],
+      "mcu": "stm32wle5ccu6",
+      "product_line": "STM32WLE5XC",
+      "variant": "WisDuo_RAK3172_Evaluation_Board"
+    },
+    "debug": {
+      "jlink_device": "STM32WLE5CC",
+      "openocd_target": "stm32wl",
+      "svd_path": "STM32WLE5_CM4.svd"
+    },
+    "frameworks": [
+      "arduino",
+      "cmsis",
+      "stm32cube",
+      "libopencm3"
+    ],
+    "name": "WisDuo RAK3172 Evaluation Board",
+    "upload": {
+      "maximum_ram_size": 48640,
+      "maximum_size": 200704,
+      "use_1200bps_touch": true,
+      "wait_for_upload_port": true,
+      "protocol": "ymodem",
+      "protocols": [
+        "ymodem",
+        "jlink",
+        "cmsis-dap",
+        "stlink",
+        "blackmagic",
+        "serial"
+      ]
+    },
+    "url": "https://github.com/RAKWireless/RAK811",
+    "vendor": "RAKwireless"
+  }
+  

@@ -30,7 +30,6 @@ class Ststm32Platform(PlatformBase):
         build_core = variables.get(
             "board_build.core", board_config.get("build.core", "arduino"))
         build_mcu = variables.get("board_build.mcu", board_config.get("build.mcu", ""))
-
         frameworks = variables.get("pioframework", [])
         if "arduino" in frameworks:
             if board.startswith(("portenta", "opta", "nicla_vision", "giga")):
@@ -47,6 +46,11 @@ class Ststm32Platform(PlatformBase):
                 self.frameworks["arduino"]["package"] = "framework-arduinoststm32l0"
                 self.packages["framework-arduinoststm32l0"]["optional"] = False
                 self.packages["framework-arduinoststm32"]["optional"] = True
+            elif build_core == "STM32WLE":
+                self.frameworks["arduino"]["package"] = "framework-arduinoststm32-rui3"
+                self.packages["framework-arduinoststm32-rui3"]["optional"] = False
+                self.packages["framework-arduinoststm32"]["optional"] = True
+                self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
             else:
                 self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.120301.0"
                 self.packages["framework-cmsis"]["version"] = "~2.50900.0"

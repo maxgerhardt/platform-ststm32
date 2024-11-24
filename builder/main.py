@@ -338,6 +338,21 @@ elif upload_protocol in debug_tools:
         upload_source = target_elf
     upload_actions = [env.VerboseAction("$UPLOADCMD", "Uploading $SOURCE")]
 
+elif upload_protocol == "ymodem":
+    def __configure_upload_port(env):
+        return env.subst("$UPLOAD_PORT")
+    FRAMEWORK_DIR = platform.get_package_dir("framework-arduinoststm32-rui3")
+    ymodem_script = join(FRAMEWORK_DIR, "tools", "uploader_ymodem.py")
+    env.Replace(
+        __configure_upload_port=__configure_upload_port,
+        UPLOADER="$PYTHONEXE",
+        UPLOADERFLAGS='"%s"' % (ymodem_script),
+        UPLOADCMD='$UPLOADER $UPLOADERFLAGS -p "${__configure_upload_port(__env__)}" -f  "$SOURCES"')
+    upload_actions = [
+        env.VerboseAction(env.AutodetectUploadPort, "Looking for upload port..."),
+        env.VerboseAction("$UPLOADCMD", "Uploading $SOURCE")
+    ]
+
 # custom upload tool
 elif upload_protocol == "custom":
     upload_actions = [env.VerboseAction("$UPLOADCMD", "Uploading $SOURCE")]
