@@ -198,6 +198,12 @@
       "owner": "platformio",
       "version": "~3.10000.0"
     },
+    "framework-arduinoststm32-rui3": {
+      "type": "framework",
+      "optional": true,
+      "owner": "platformio",
+      "version": "https://github.com/maxgerhardt/RAK-STM32-RUI/archive/refs/heads/main.zip"
+    },
     "framework-arduinostm32mxchip": {
       "type": "framework",
       "optional": true,
